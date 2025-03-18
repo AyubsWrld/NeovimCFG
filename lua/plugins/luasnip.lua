@@ -28,6 +28,13 @@ return {
         t({ "/*", " *@signature  :", " *@purpose    :", " *@param      :", " *@return     :", "*/" }),
       }),
     })
+
+    ls.add_snippets("cpp", {
+      s("template", {
+        t({ "template <typename T>", "T name( T x){", "   return x;", "}" }),
+      }),
+    })
+
     -- Optional keybindings
     vim.api.nvim_set_keymap(
       "i",
